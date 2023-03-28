@@ -9,9 +9,9 @@ const ingredients = [
 
 
 
-for (i = 0; i < ingredients.length; i++) {
+for (const ingredient of ingredients) {
   const item = document.createElement("li");
-  item.innerHTML = ingredients[i];
+  item.innerHTML = ingredient;
   item.setAttribute("class", "item");
   document.getElementById("ingredients").appendChild(item);
 }
