@@ -7,11 +7,14 @@ const ingredients = [
   'Condiments',
 ];
 
+const ulList = document.getElementById("ingredients");
 
-
-for (const ingredient of ingredients) {
+const liItems = ingredients.map((ingredient) => {
   const item = document.createElement("li");
-  item.innerHTML = ingredient;
-  item.setAttribute("class", "item");
-  document.getElementById("ingredients").appendChild(item);
-}
+  item.textContent = ingredient;
+  item.classList.add("item");
+  return item;
+});
+
+ulList.append(...liItems);
+
